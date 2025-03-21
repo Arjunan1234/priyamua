@@ -1,0 +1,66 @@
+@use "../../styles/variable.scss" as variables;
+
+
+.serviceContainer {
+    padding: 120px 100px;
+    background: #222;
+
+    .serviceContent {
+        @include variables.d-flex($al: center, $jc: space-between);
+        flex-direction: column;
+        gap: 80px;
+
+        .serviceHeading {
+            @include variables.d-flex($al: center, $jc: space-between);
+            flex-direction: column;
+
+            p {
+                @include variables.aeonik-font();
+                color: #E7986D;
+                @include variables.font-style($fs: 16px, $fw: 400, $lh: 138%);
+
+            }
+
+            span {
+                @include variables.carien-font();
+                @include variables.font-style($fs: 32px, $fw: 400, $lh: 130%);
+                color: #FFF;
+
+            }
+        }
+
+        .serviceCardContainer {
+            @include variables.d-flex($al: center, $jc: space-between);
+            gap: 20px;
+            flex-wrap: wrap;
+
+
+            .card {
+                padding: 24px;
+                min-height: 182px;
+                border-radius: 16px;
+                max-width: 392px;
+                border: 1px solid #3B3B3B;
+                background: rgba(255, 255, 255, 0.10);
+                backdrop-filter: blur(220px);
+                @include variables.d-flex($al: flex-start, $jc: flex-start);
+                gap: 8px;
+                flex-direction: column;
+
+                h5 {
+                    @include variables.carien-font();
+                    color: #FFF;
+                    @include variables.font-style($fs: 24px, $fw: 400, $lh: 33px);
+
+                }
+
+                p {
+                    @include variables.carlito-font();
+                    color: #CCC;
+                    @include variables.font-style($fs: 18px, $fw: 400, $lh: 30px);
+
+                }
+            }
+        }
+    }
+}

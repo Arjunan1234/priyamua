@@ -1,0 +1,79 @@
+@use "../../styles/variable.scss" as variables;
+
+.chooseMeContainer {
+    background: #FFF7EB;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    .chooseHeading {
+        @include variables.d-flex($al: center, $jc: flex-start, $gap : 8px);
+        flex-direction: column;
+
+
+        p {
+            @include variables.aeonik-font();
+            color: #E68C5B;
+            @include variables.font-style($fs: 16px, $fw: 400, $lh: 138%);
+
+        }
+
+        h5 {
+            @include variables.carien-font();
+            color: #181D25;
+            @include variables.font-style($fs: 32px, $fw: 400, $lh: 138%);
+
+        }
+
+        padding-bottom: 60px;
+    }
+
+    .backgroundContainer {
+        position: relative;
+        background-size: 100% 100%;
+
+        img {
+            max-width: 1440px;
+        }
+
+        padding-top: 304px;
+
+        .chooseContent {
+
+            bottom: 0;
+            min-height: 211px;
+            margin: 0 auto;
+
+            max-width: 1200px;
+            @include variables.d-flex($al: flex-start, $jc: flex-start, $gap : 24px);
+            background: rgba(4, 2, 1, 0.70);
+            backdrop-filter: blur(20px);
+            padding: 32px;
+
+
+            .chooseSpecific {
+                @include variables.d-flex($al: flex-start, $jc: flex-start, $gap : 24px);
+                flex-direction: column;
+                height: 211px;
+
+                padding-right: 24px;
+                border-right: 1px solid #FFA11A;
+                ;
+
+                p {
+                    @include variables.carlito-font();
+                    max-width: 188px;
+                    color: #FFF;
+                    @include variables.font-style($fs: 16px, $fw: 400, $lh: 30px);
+
+                }
+
+                &:last-child {
+                    border-right: none;
+                }
+
+            }
+        }
+
+    }
+
+}

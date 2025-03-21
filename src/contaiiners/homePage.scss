@@ -1,0 +1,90 @@
+@use "../styles/variable.scss" as variables;
+
+.bannerComponent {
+    position: relative;
+
+    .bannerLine {
+        position: absolute;
+        width: 100%;
+        padding-left: 100px;
+        padding-right: 100px;
+        bottom: 40px;
+        @include variables.carlito-font();
+        @include variables.d-flex($al: flex-start, $jc: flex-start, );
+
+        p {
+            transition: border-top 0.5s ease-in-out;
+            width: 33%;
+            padding: 20px 40px;
+            color: #FFF;
+            @include variables.font-style($fs: 16px, $fw: 400, $lh: 22.4px);
+
+            border-top: 1px solid rgba(255, 255, 255, 0.20);
+        }
+    }
+
+    .bannerLine p.active {
+        border-top: 1px solid white !important;
+    }
+
+    .banner {
+        transition: opacity 0.5s ease-in-out;
+
+        &.fade-in {
+            opacity: 1;
+        }
+
+        &.fade-out {
+            opacity: 0;
+        }
+    }
+
+    .slick-dots {
+        display: none !important;
+    }
+
+}
+
+
+@media screen and (max-width : 992px) {
+
+    .bannerComponent {
+        position: relative;
+
+        .bannerLine {
+            display: none !important;
+
+
+            p {
+                transition: border-top 0.5s ease-in-out;
+                width: 33%;
+                padding: 20px 40px;
+                color: #FFF;
+                @include variables.font-style($fs: 16px, $fw: 400, $lh: 22.4px);
+
+                border-top: 1px solid rgba(255, 255, 255, 0.20);
+            }
+        }
+
+        .bannerLine p.active {
+            border-top: 1px solid white !important;
+        }
+
+        .banner {
+            transition: opacity 0.5s ease-in-out;
+
+            &.fade-in {
+                opacity: 1;
+            }
+
+            &.fade-out {
+                opacity: 0;
+            }
+        }
+
+        .slick-dots {
+            display: none !important;
+        }
+
+    }
+}

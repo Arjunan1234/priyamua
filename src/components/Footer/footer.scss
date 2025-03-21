@@ -1,0 +1,58 @@
+@use "../../styles/variable.scss" as variables;
+
+.footerContainer {
+    background: #FFEDD1;
+    padding: 100px 100px 16px 100px;
+
+
+    .footerDetails {
+        width: 100%;
+        @include variables.d-flex($al: center, $jc: space-between, $gap: 80px);
+        flex-direction: column;
+
+        .footerRelate {
+            width: 100%;
+            @include variables.d-flex($al: center, $jc: space-between, $gap: 10px);
+
+            .footerContent {
+                width: 100%;
+                max-width: 800px;
+                @include variables.d-flex($al: center, $jc: space-between, $gap: 10px);
+                flex-direction: column;
+
+                .footerData {
+                    width: 100%;
+                    padding-bottom: 12px;
+                    border-bottom: 1px solid #000;
+
+                    @include variables.d-flex($al: center, $jc: space-between, $gap: 10px);
+
+                    .footerSubTitle {
+                        cursor: pointer;
+                        color: #000;
+                        @include variables.aeonik-font();
+                        @include variables.font-style($fs: 20px, $fw: 400, $lh: 22.4px);
+                    }
+
+                }
+            }
+        }
+
+        .backtotop {
+            cursor: pointer;
+            @include variables.d-flex($al: center, $jc: space-between, $gap: 16px);
+            flex-direction: column;
+            color: #000;
+            @include variables.aeonik-font();
+
+            @include variables.font-style($fs: 24px, $fw: 400, $lh: 22.4px);
+        }
+    }
+
+    .copyRight {
+        color: #5A4B35;
+        @include variables.aeonik-font();
+        @include variables.font-style($fs: 14px, $fw: 400, $lh: 22.4px);
+
+    }
+}

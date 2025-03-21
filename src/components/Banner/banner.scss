@@ -1,0 +1,91 @@
+@use "../../styles/variable.scss" as variables;
+
+.bannerContainer {
+    background-size: 100% 100%;
+    padding-left: 100px;
+    padding-top: 170px;
+    padding-bottom: 170px;
+
+    .bannerContent {
+        max-width: 750px;
+        @include variables.d-flex($al: flex-start, $jc: space-between, $gap : 24px);
+        flex-direction: column;
+
+        h2 {
+            @include variables.carien-font();
+            color: #FFAF3B;
+            @include variables.font-style($fs: 48px, $fw: 400, $lh: 130%);
+        }
+
+        p {
+            @include variables.carlito-font();
+            color: #FFF;
+            @include variables.font-style($fs: 20px, $fw: 400, $lh: 190%);
+
+        }
+
+
+
+    }
+
+    .submitbutton {
+        cursor: pointer;
+        @include variables.aeonik-font();
+        margin-top: 20px;
+        cursor: pointer;
+        @include variables.d-flex($al: flex-start, $jc: space-between, $gap: 8px);
+        padding: 14px 24px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        background: var(--Brand-Gradient, linear-gradient(97deg, #FFA11A 25.2%, #FFC13B 78.04%));
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .bannerContainer {
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-left: 20px;
+        padding-top: 76px;
+        padding-bottom: 40px;
+
+        .bannerContent {
+            max-width: 750px;
+            @include variables.d-flex($al: flex-start, $jc: space-between, $gap : 24px);
+            flex-direction: column;
+
+            h2 {
+                max-width: 335px;
+                @include variables.carien-font();
+                color: #FFAF3B;
+                @include variables.font-style($fs: 36px, $fw: 400, $lh: 130%);
+            }
+
+            p {
+                max-width: 335px;
+
+                @include variables.carlito-font();
+                color: #FFF;
+                @include variables.font-style($fs: 18px, $fw: 400, $lh: 190%);
+
+            }
+
+
+
+        }
+
+        .submitbutton {
+            cursor: pointer;
+            @include variables.aeonik-font();
+            margin-top: 20px;
+            cursor: pointer;
+            @include variables.d-flex($al: flex-start, $jc: space-between, $gap: 8px);
+            padding: 14px 24px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            background: var(--Brand-Gradient, linear-gradient(97deg, #FFA11A 25.2%, #FFC13B 78.04%));
+        }
+    }
+
+}

@@ -1,0 +1,56 @@
+@use "../../styles/variable.scss" as variables;
+
+.inputContainer {
+    position: relative;
+    width: 100%;
+    @include variables.d-flex($al: flex-start, $jc: space-between, $gap: 12px);
+    flex-direction: column;
+
+    label {
+        @include variables.aeonik-font();
+        @include variables.font-style($fs: 16px, $fw: 400, $lh: 22.4px);
+        color: #000;
+
+    }
+
+    .span {
+        color: #F00;
+        @include variables.font-style($fs: 16px, $fw: 400, $lh: 22.4px);
+
+    }
+
+    .calenderIcon {
+        position: absolute;
+        right: 0;
+        top: 44px;
+        right: 16px;
+    }
+
+
+    input {
+
+        border: none;
+        padding: 16px;
+        width: 100%;
+        border-radius: 8px;
+        background: #FFEFD6;
+
+        &::placeholder {
+
+            color: #898989;
+            @include variables.aeonik-font();
+            @include variables.font-style($fs: 16px, $fw: 400, $lh: 24px);
+
+        }
+    }
+
+    .error {
+        position: absolute;
+        color: #F00;
+        @include variables.aeonik-font();
+        bottom: -22px;
+        @include variables.font-style($fs: 14px, $fw: 400, $lh: 22.4px);
+
+    }
+
+}

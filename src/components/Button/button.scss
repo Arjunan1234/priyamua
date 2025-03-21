@@ -1,0 +1,13 @@
+@use "../../styles/variable.scss" as variables;
+
+.buttonContainer {
+    cursor: pointer;
+    @include variables.aeonik-font();
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: var(--Brand-Gradient, linear-gradient(97deg, #FFA11A 25.2%, #FFC13B 78.04%));
+    padding: 8px 22px;
+    color: variables.$black-color-0;
+    @include variables.font-style($fs: 18px, $fw: 500, $lh: 22.4px);
+
+}

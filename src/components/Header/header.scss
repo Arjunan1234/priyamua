@@ -1,0 +1,60 @@
+@use "../../styles/variable.scss" as variables;
+
+.headerContainer {
+    background-color: variables.$black-color-0;
+    padding: 18px 100px;
+    @include variables.d-flex($al: center, $jc: space-between);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+
+    .humburger {
+        display: none !important;
+    }
+
+    .navlinkContainer {
+        max-width: 310px;
+
+        @include variables.d-flex($al: center, $jc: space-between, $gap: 50px);
+
+        .navLink {
+            cursor: pointer;
+            @include variables.aeonik-font();
+            white-space: nowrap;
+            @include variables.font-style($fs: 16px, $fw: 400, $lh: 22.4px);
+            color: #FFF;
+
+        }
+
+        .service {
+            @include variables.d-flex($al: center, $jc: space-between, $gap: 2px);
+        }
+
+
+    }
+}
+
+
+
+@media screen and (max-width : 992px) {
+
+    .headerContainer {
+        padding: 18px 20px;
+
+
+        .humburger {
+            display: block !important;
+        }
+
+        .navlinkContainer {
+            display: none !important;
+        }
+
+        .buttonContainer {
+            display: none !important;
+        }
+    }
+
+
+}
