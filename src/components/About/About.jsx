@@ -1,15 +1,20 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
 
 import aboutImage from "../../assets/images/about/aboutImage.png";
+import aboutMobile from "../../assets/images/about/aboutMobile.png";
 import star from "../../assets/images/about/star.svg";
 import "./about.scss";
 import FadeUp from "../../utils/FadeUp";
 
 const About = () => {
+  const isLargeScreen = useMediaQuery({ maxWidth: 992 });
+  console.log(isLargeScreen, "isLargeScreen");
+
   return (
     <section className="container aboutContainer">
       <div>
-        <img src={aboutImage} alt="" />
+        <img src={isLargeScreen ? aboutMobile : aboutImage} alt="" />
       </div>
       <div className="aboutContent">
         <div className="aboutHeading">

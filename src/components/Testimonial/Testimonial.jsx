@@ -102,20 +102,14 @@ const Testimonial = () => {
           {testimonials.map((testimonial) => (
             <div className="card" key={testimonial.id}>
               <div className="cardHeading">
-                <FadeUp>
-                  <p>Google Review</p>
-                </FadeUp>
+                <p>Google Review</p>
                 <span>
                   4.8 <img src={star} alt="star" />
                 </span>
               </div>
-              <FadeUp>
-                <p className="testimonialReview">{testimonial.review}</p>
-              </FadeUp>
+              <p className="testimonialReview">{testimonial.review}</p>
               <img src={profile} alt="profile" />
-              <FadeUp>
-                <span className="name">{testimonial.name}</span>
-              </FadeUp>
+              <span className="name">{testimonial.name}</span>
             </div>
           ))}
         </Slider>

@@ -55,3 +55,63 @@
         }
     }
 }
+
+
+@media screen and (max-width : 992px) {
+    .aboutContainer {
+        @include variables.d-flex($al: center, $jc: center, );
+        background: #FFF7EB;
+        flex-direction: column;
+
+        .aboutContent {
+            padding: 40px 20px;
+            @include variables.d-flex($al: flex-start, $jc: flex-start, $gap: 24px);
+            flex-direction: column;
+
+            .aboutHeading {
+                @include variables.d-flex($al: flex-start, $jc: flex-start, $gap: 6px);
+                flex-direction: column;
+
+                p {
+                    @include variables.aeonik-font();
+
+                    color: #FFAF3B;
+                    @include variables.font-style($fs: 16px, $fw: 400, $lh: 138%);
+
+                }
+
+                h5 {
+                    @include variables.carien-font();
+                    max-width: 590px;
+                    color: #130A07;
+                    @include variables.font-style($fs: 28px, $fw: 400, $lh: 138%);
+
+                }
+
+
+            }
+
+            .aboutDetail {
+                @include variables.d-flex($al: flex-start, $jc: flex-start, $gap: 20px);
+                flex-direction: column;
+
+                p {
+                    @include variables.carlito-font();
+                    color: #5A4B35;
+                    @include variables.font-style($fs: 18px, $fw: 400, $lh: 30px);
+
+                }
+            }
+
+            .aboutStar {
+                @include variables.d-flex($al: flex-start, $jc: flex-start, $gap: 16px);
+                flex-direction: column;
+
+                p {
+                    @include variables.carlito-font();
+                    @include variables.d-flex($al: center, $jc: flex-start, $gap: 12px);
+                }
+            }
+        }
+    }
+}

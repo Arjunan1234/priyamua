@@ -66,3 +66,77 @@
     }
 
 }
+
+
+
+@media screen and (max-width : 992px) {
+    .connectContainer {
+        padding: 40px 20px;
+        background-image: url("../../assets/images/connect/connectBackground.png");
+        background-position: bottom;
+        background-size: 100% 100%;
+
+        .connectContent {
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid rgba(22, 94, 240, 0.20);
+            background: #FFEDD1;
+            box-shadow: 0px 20px 76px 0px rgba(0, 0, 0, 0.08);
+            @include variables.d-flex($al: center, $jc: space-between, $gap : 42px);
+            flex-direction: column;
+
+            .connectData {
+                @include variables.d-flex($al: center, $gap: 8px);
+                flex-direction: column;
+                max-width: 674px;
+
+                p {
+                    @include variables.aeonik-font();
+                    color: #E68C5B;
+                    @include variables.font-style($fs: 16px, $fw: 400, $lh: 138%);
+
+                }
+
+                h2 {
+                    text-align: center;
+                    @include variables.carien-font();
+                    color: #000;
+                    @include variables.font-style($fs: 28px, $fw: 400, $lh: 54px);
+
+
+                }
+
+                span {
+                    text-align: center;
+                    @include variables.aeonik-font();
+                    color: #5A4B35;
+                    @include variables.font-style($fs: 16px, $fw: 400, $lh: 24px);
+
+                }
+            }
+        }
+
+        .buttonContainer2 {
+
+            @include variables.d-flex($al: flex-start, $jc: space-between, $gap : 16px);
+            flex-direction: column;
+
+            .buttonContainer {
+                padding: 14px 24px;
+            }
+
+            .consulation {
+                cursor: pointer;
+                @include variables.aeonik-font();
+                border-radius: 24px;
+                border: 1px solid #000;
+                background: rgba(255, 255, 255, 0.10);
+                @include variables.font-style($fs: 18px, $fw: 500, $lh: 24px);
+                color: #000;
+                padding: 14px 24px;
+
+            }
+        }
+
+    }
+}

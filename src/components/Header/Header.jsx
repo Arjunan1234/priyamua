@@ -5,13 +5,10 @@ import websiteLogo from "../../assets/images/header/websiteLogo.svg";
 import humburgerIcon from "../../assets/images/header/humburger.svg";
 // import downArrow from "../../assets/images/header/downArrow.svg";
 import Button from "../Button/Button";
-import useScreenMobile from "../../utils/UseScreen";
 import FadeUp from "../../utils/FadeUp";
 
 const Header = () => {
-  const isMobile = useScreenMobile({ size: 992 });
 
-  console.log(isMobile, "isMobile");
 
   return (
     <header className="container headerContainer">

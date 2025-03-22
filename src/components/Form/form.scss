@@ -55,3 +55,62 @@
 
     }
 }
+
+
+@media screen and (max-width : 992px) {
+    .formContainer {
+        @include variables.d-flex($al: center, $gap: 10px);
+        flex-direction: column;
+
+        img {
+            max-width: 375px;
+            max-height: 874.5px;
+        }
+
+
+        .formData {
+            padding: 40px 20px;
+            width: 100%;
+            background: #FFF7EB;
+            box-shadow: 0px 0px 40px 0px rgba(66, 30, 11, 0.06);
+
+            .form {
+                margin-top: 36px;
+                max-width: 540px;
+                @include variables.d-flex($al: flex-start, $jc: space-between, $gap: 24px);
+                flex-direction: column;
+
+                .submitbutton {
+
+                    cursor: pointer;
+                    @include variables.aeonik-font();
+                    @include variables.d-flex($al: flex-start, $jc: space-between, $gap: 8px);
+                    padding: 14px 24px;
+                    border-radius: 24px;
+                    border: 1px solid rgba(255, 255, 255, 0.10);
+                    background: var(--Brand-Gradient, linear-gradient(97deg, #FFA11A 25.2%, #FFC13B 78.04%));
+                }
+            }
+
+            .formHeading {
+                @include variables.d-flex($al: flex-start, $jc: space-between, $gap: 8px);
+                flex-direction: column;
+
+                .formName {
+                    @include variables.aeonik-font();
+                    color: #E68C5B;
+                    @include variables.font-style($fs: 16px, $fw: 400, $lh: 138%);
+
+                }
+
+                .contact {
+                    @include variables.carien-font();
+                    color: #000;
+                    @include variables.font-style($fs: 28px, $fw: 400, $lh: 138%);
+
+                }
+            }
+
+        }
+    }
+}

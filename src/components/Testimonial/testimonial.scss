@@ -144,3 +144,153 @@
         display: none !important;
     }
 }
+
+
+
+@media screen and (max-width : 992px) {
+    .testimonialContainer {
+        padding: 40px 20px;
+        background: #000;
+        @include variables.d-flex($al: center, $jc: flex-start, $gap: 60px);
+        flex-direction: column;
+
+        .testimonialHeading {
+            @include variables.d-flex($al: center, $jc: center, $gap: 8px);
+            flex-direction: column;
+            max-width: 408px;
+
+            p {
+                color: #E68C5B;
+                @include variables.aeonik-font();
+                @include variables.font-style($fs: 16px, $fw: 400, $lh: 22.08px);
+
+            }
+
+            span {
+                text-align: center;
+                color: #FFF;
+                @include variables.carien-font();
+                @include variables.font-style($fs: 28px, $fw: 400, $lh: 22.08px);
+            }
+
+            h6 {
+                @include variables.carlito-font();
+                padding-top: 16px;
+                text-align: center;
+                color: #FFF;
+                @include variables.font-style($fs: 18px, $fw: 400, $lh: 30px);
+            }
+        }
+
+        .card {
+            max-width: 600px;
+            display: flex !important;
+            @include variables.d-flex($al: center, $jc: center, $gap: 20px);
+            flex-direction: column;
+            padding: 20px 16px;
+            background: rgba(255, 255, 255, 0.11);
+            backdrop-filter: blur(12.5px);
+            margin-bottom: 40px;
+
+            .cardHeading {
+                width: 100%;
+                @include variables.d-flex($al: center, $jc: space-between, $gap: 8px);
+                flex-direction: column;
+
+                p {
+
+                    color: #FFF;
+                    @include variables.aeonik-font();
+                    @include variables.font-style($fs: 24px, $fw: 700, $lh: normal);
+                    text-align: center;
+
+                }
+
+                span {
+                    @include variables.aeonik-font();
+                    @include variables.d-flex($al: center, $jc: center, $gap: 2px);
+                    color: #FEA500;
+                    @include variables.font-style($fs: 20px, $fw: 800, $lh: normal);
+
+                }
+            }
+
+            .testimonialReview {
+                padding-top: 4px;
+                padding-bottom: 20px;
+                text-align: center;
+                @include variables.aeonik-font();
+                color: #CCC;
+                @include variables.font-style($fs: 18px, $fw: 400, $lh: 210%);
+
+            }
+
+            .name {
+                @include variables.aeonik-font();
+                @include variables.font-style($fs: 20px, $fw: 700, $lh: 140%);
+                color: #FFFEFD;
+
+            }
+        }
+
+
+
+        .slick-dots {
+            bottom: -30px;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            li {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: #8E8E8E;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+
+                button {
+                    display: none;
+                }
+            }
+
+            .slick-active {
+                width: 40px;
+                height: 12px;
+                border-radius: 20px;
+                background: #8E8E8E;
+                position: relative;
+                overflow: hidden;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0%;
+                    height: 100%;
+                    background: linear-gradient(90deg, #FEA500 0%, #FFCC70 100%);
+                    animation: fillLeftToRight 0.5s forwards;
+                }
+            }
+        }
+
+        @keyframes fillLeftToRight {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        // Hides next and previous arrows (correct placement)
+        .slick-prev,
+        .slick-next {
+            display: none !important;
+        }
+    }
+}

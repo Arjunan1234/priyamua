@@ -18,6 +18,7 @@ import ChooseMe from "../components/ChooseMe/ChooseMe";
 import Testimonial from "../components/Testimonial/Testimonial";
 import ServiceBridal from "../components/ServieBridal/ServiceBridal";
 import Portfolio from "../components/Portfolio/Portfolio";
+import { useMediaQuery } from "react-responsive";
 
 const banners = [
   {
@@ -40,8 +41,22 @@ const banners = [
   },
 ];
 
+
+const Mobile = [
+  {
+    heading: "Best Bridal Makeup Artist in Dwarka",
+  },
+  {
+    heading: "Unleashing Your Inner Glamour, One Brushstroke at a Time",
+  },
+  {
+    heading: "Unleashing Your Inner Glamour, One Brushstroke at a Time",
+  },
+];
+
 const HomePage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const isLargeScreen = useMediaQuery({ maxWidth: 992 });
 
   const settings = {
     dots: true,
@@ -56,6 +71,8 @@ const HomePage = () => {
     pauseOnHover: false,
     beforeChange: (oldIndex, newIndex) => setCurrentIndex(newIndex),
   };
+
+  const progressValue = 100 - ((currentIndex + 1) / Mobile.length) * 100;
 
   return (
     <>
@@ -84,6 +101,30 @@ const HomePage = () => {
             Luxury Makeup Studio for All Occasions
           </p>
         </div>
+
+        {isLargeScreen && (
+          <div className="mobileSlide">
+            {/* Circular Progress */}
+            <div className="progress-circle">
+              <svg viewBox="0 0 36 36">
+                <circle cx="18" cy="18" r="16" className="background" />
+                <circle
+                  cx="18"
+                  cy="18"
+                  r="16"
+                  className="progress"
+                  style={{ strokeDashoffset: progressValue }}
+                />
+              </svg>
+              <span>
+                {currentIndex + 1}/{Mobile.length}
+              </span>
+            </div>
+
+            {/* Show only one text based on index */}
+            <p className="active">{Mobile[currentIndex].heading}</p>
+          </div>
+        )}
       </div>
       <About />
       <ChooseMe />

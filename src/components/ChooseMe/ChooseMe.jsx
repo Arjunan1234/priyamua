@@ -1,6 +1,8 @@
 import React from "react";
 
 import choose from "../../assets/images/choose/choose.png";
+import chooseMobile from "../../assets/images/choose/chooseMobile.png";
+
 import top from "../../assets/images/choose/top.svg";
 import available from "../../assets/images/choose/available.svg";
 import certified from "../../assets/images/choose/certified.svg";
@@ -8,6 +10,7 @@ import custome from "../../assets/images/choose/custome.svg";
 import premium from "../../assets/images/choose/premium.svg";
 import "./chooseMe.scss";
 import FadeUp from "../../utils/FadeUp";
+import { useMediaQuery } from "react-responsive";
 
 const chooseItems = [
   {
@@ -38,6 +41,7 @@ const chooseItems = [
 ];
 
 const ChooseMe = () => {
+  const isLargeScreen = useMediaQuery({ maxWidth: 992 });
   return (
     <section className="container chooseMeContainer">
       <div className="chooseHeading">
@@ -50,7 +54,9 @@ const ChooseMe = () => {
       </div>
       <div
         className="backgroundContainer"
-        style={{ backgroundImage: `url(${choose})` }}
+        style={{
+          backgroundImage: `url(${isLargeScreen ? chooseMobile : choose} )`,
+        }}
       >
         <div className="chooseContent">
           {chooseItems.map((item) => (

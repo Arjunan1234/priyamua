@@ -12,19 +12,22 @@
         max-width: 548px;
 
         p {
+            @include variables.aeonik-font();
             color: #E68C5B;
             @include variables.font-style($fs: 16px, $fw: 400, $lh: 22.08px);
 
         }
 
         h5 {
+            @include variables.carien-font();
             color: #181D25;
             @include variables.font-style($fs: 32px, $fw: 400, $lh: normal);
 
         }
 
         span {
-            padding-bottom: 60px;
+            @include variables.carlito-font();
+            padding-bottom: 32px !important;
             text-align: center;
             padding-top: 16px;
             color: #5A4B35;
@@ -34,4 +37,45 @@
     }
 
 
+}
+
+
+
+@media screen and (max-width : 992px) {
+    .portfolioContainer {
+        padding: 40px 20px;
+        @include variables.d-flex($al: center, $jc: center, $gap: 8px);
+        flex-direction: column;
+        background: #FFF7EB;
+
+        .portfolioHeading {
+            @include variables.d-flex($al: center, $jc: center, $gap: 8px);
+            flex-direction: column;
+            max-width: 548px;
+
+            p {
+                color: #E68C5B;
+                @include variables.font-style($fs: 16px, $fw: 400, $lh: 22.08px);
+
+            }
+
+            h5 {
+                text-align: center;
+                color: #181D25;
+                @include variables.font-style($fs: 28px, $fw: 400, $lh: normal);
+
+            }
+
+            span {
+                padding-bottom: 60px;
+                text-align: center;
+                padding-top: 16px;
+                color: #5A4B35;
+                @include variables.font-style($fs: 18px, $fw: 400, $lh: 30px);
+
+            }
+        }
+
+
+    }
 }
