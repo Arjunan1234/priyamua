@@ -2,17 +2,18 @@
 
 ## Prerequisites
 Make sure you have **Node.js** installed on your system before proceeding.
+install Node Js : https://nodejs.org/en/download (for Windows)
 
 ## Installation Steps
 
 1. **Clone the Project**
    ```sh
-   git clone <repository-url>
+   git clone [<repository-url>](https://github.com/Arjunan1234/priyamua.git)
    ```
 
 2. **Navigate to the Project Folder**
    ```sh
-   cd <project-folder>
+   cd priyamua
    ```
 
 3. **Install Dependencies**
@@ -25,9 +26,8 @@ Make sure you have **Node.js** installed on your system before proceeding.
    npm run dev
    ```
 
-## Notes
-- Ensure you have the correct environment variables set up if required.
-- The server will start on the default port unless specified otherwise.
+## Open In Broswer
+- [localhost:](http://localhost:5173)
 
-Happy Coding! 🚀
+
 
