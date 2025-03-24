@@ -8,7 +8,7 @@ install Node Js : https://nodejs.org/en/download (for Windows)
 
 1. **Clone the Project**
    ```sh
-   git clone [<repository-url>](https://github.com/Arjunan1234/priyamua.git)
+   git clone https://github.com/Arjunan1234/priyamua.git
    ```
 
 2. **Navigate to the Project Folder**
