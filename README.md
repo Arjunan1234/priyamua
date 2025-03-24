@@ -27,7 +27,7 @@ install Node Js : https://nodejs.org/en/download (for Windows)
    ```
 
 ## Open In Broswer
-- [localhost:](http://localhost:5173)
+- http://localhost:5173
 
 
 
