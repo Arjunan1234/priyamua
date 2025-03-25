@@ -44,6 +44,10 @@
         background: rgba(255, 255, 255, 0.11);
         backdrop-filter: blur(12.5px);
 
+        .imageAvatar {
+            max-width: 60px;
+        }
+
         .cardHeading {
             width: 100%;
             @include variables.d-flex($al: center, $jc: space-between, $gap: 8px);
@@ -191,6 +195,11 @@
             background: rgba(255, 255, 255, 0.11);
             backdrop-filter: blur(12.5px);
             margin-bottom: 40px;
+
+
+            .imageAvatar {
+                max-width: 32px;
+            }
 
             .cardHeading {
                 width: 100%;

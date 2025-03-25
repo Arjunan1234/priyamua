@@ -10,6 +10,10 @@ import backgroundImage1 from "../assets/images/banner/banner1.png";
 import backgroundImage2 from "../assets/images/banner/banner2.png";
 import backgroundImage3 from "../assets/images/banner/banner3.png";
 
+import backgroundImageMobile1 from "../assets/images/banner/banner1Mobile.png";
+import backgroundImageMobile2 from "../assets/images/banner/banner2Mobile.png";
+import backgroundImageMobile3 from "../assets/images/banner/banner3Mobile.png";
+
 import "./homePage.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -23,24 +27,26 @@ import { useMediaQuery } from "react-responsive";
 const banners = [
   {
     image: backgroundImage1,
+    mobileImage: backgroundImageMobile1,
     heading: "Unleashing Your Inner Glamour, One Brushstroke at a Time",
     content:
       "Welcome to Priya's Makeup Studio, your go-to destination for professional makeup services in Dwarka, New Delhi. Whether you need a bridal makeover, party glam, or high-fashion editorial makeup, I bring creativity and expertise to enhance your natural beauty.",
   },
   {
     image: backgroundImage2,
+    mobileImage: backgroundImageMobile2,
     heading: "Unleashing Your Inner Glamour, One Brushstroke at a Time",
     content:
       "Welcome to Priya's Makeup Studio, your go-to destination for professional makeup services in Dwarka, New Delhi. Whether you need a bridal makeover, party glam, or high-fashion editorial makeup, I bring creativity and expertise to enhance your natural beauty.",
   },
   {
     image: backgroundImage3,
+    mobileImage: backgroundImageMobile3,
     heading: "Unleashing Your Inner Glamour, One Brushstroke at a Time",
     content:
       "Welcome to Priya's Makeup Studio, your go-to destination for professional makeup services in Dwarka, New Delhi. Whether you need a bridal makeover, party glam, or high-fashion editorial makeup, I bring creativity and expertise to enhance your natural beauty.",
   },
 ];
-
 
 const Mobile = [
   {
@@ -81,7 +87,7 @@ const HomePage = () => {
           {banners.map((banner, index) => (
             <div key={index} className="bannerItem">
               <Banner
-                image={banner.image}
+                image={isLargeScreen ? banner.mobileImage : banner.image}
                 heading={banner.heading}
                 content={banner.content}
               />

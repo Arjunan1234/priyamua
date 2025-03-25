@@ -7,6 +7,8 @@ import "./testimonial.scss";
 import star from "../../assets/images/choose/Star.svg";
 import profile from "../../assets/images/choose/profile.svg";
 import profile2 from "../../assets/images/choose/profile2.svg";
+import femaleAvatar from "../../assets/images/choose/femaleAvatar.png";
+// import maleAvatar from "../../assets/images/choose/maleAvatar.png";
 import FadeUp from "../../utils/FadeUp";
 
 const testimonials = [
@@ -29,14 +31,12 @@ const testimonials = [
     review:
       "Priya did an incredible job on my bridal makeup! She understood exactly what I wanted and made me feel like a queen. Highly recommended",
     name: "Riya Mathew",
-    image: profile,
   },
   {
     id: 4,
     review:
       "Priya did an incredible job on my bridal makeup! She understood exactly what I wanted and made me feel like a queen. Highly recommended",
     name: "Ananya K",
-    image: profile2,
   },
   {
     id: 3,
@@ -108,7 +108,11 @@ const Testimonial = () => {
                 </span>
               </div>
               <p className="testimonialReview">{testimonial.review}</p>
-              <img src={profile} alt="profile" />
+              <img
+                className="imageAvatar"
+                src={testimonial?.image ? testimonial?.image : femaleAvatar}
+                alt="profile"
+              />
               <span className="name">{testimonial.name}</span>
             </div>
           ))}

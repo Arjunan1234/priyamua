@@ -61,7 +61,7 @@ const BridalRadial2 = [
 
 const ServiceBridal = () => {
   return (
-    <section className="container serviceBridalContainer">
+    <section className="container serviceBridalContainer" id="service">
       <div className="serivceBridalHeading">
         <FadeUp>
           <p>SERVICES</p>

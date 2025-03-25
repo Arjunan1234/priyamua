@@ -8,7 +8,25 @@ import Button from "../Button/Button";
 import FadeUp from "../../utils/FadeUp";
 
 const Header = () => {
+  const scrollToAbout = () => {
+    const formSection = document.getElementById("about-us");
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  const scrollToService = () => {
+    const formSection = document.getElementById("service");
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
+  const scrollToPortFolio = () => {
+    const formSection = document.getElementById("portfolio");
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <header className="container headerContainer">
@@ -19,16 +37,20 @@ const Header = () => {
       <>
         <div className="navlinkContainer">
           <FadeUp>
-            <p className="navLink">About Us</p>
+            <p className="navLink" onClick={scrollToAbout}>
+              About Us
+            </p>
           </FadeUp>
           <FadeUp>
-            <p className="navLink service">
+            <p className="navLink service" onClick={scrollToService}>
               {/* Services <img src={downArrow} alt="" /> */}
               Services
             </p>
           </FadeUp>
           <FadeUp>
-            <p className="navLink">Portfolio</p>
+            <p className="navLink" onClick={scrollToPortFolio}>
+              Portfolio
+            </p>
           </FadeUp>
         </div>
         <Button />

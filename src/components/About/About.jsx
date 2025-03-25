@@ -8,11 +8,12 @@ import "./about.scss";
 import FadeUp from "../../utils/FadeUp";
 
 const About = () => {
+
   const isLargeScreen = useMediaQuery({ maxWidth: 992 });
   console.log(isLargeScreen, "isLargeScreen");
 
   return (
-    <section className="container aboutContainer">
+    <section className="container aboutContainer" id="about-us">
       <div>
         <img src={isLargeScreen ? aboutMobile : aboutImage} alt="" />
       </div>
