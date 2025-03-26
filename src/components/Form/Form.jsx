@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./form.scss";
 import Input from "../Input/Input";
-
+import emailjs from "@emailjs/browser";
 import formImage from "../../assets/images/form/formImage.png";
 import rightArrow from "../../assets/images/form/rightArrow.svg";
 import calender from "../../assets/images/form/calender.svg";
@@ -15,6 +15,7 @@ const Form = () => {
     eventDate: "",
     eventLocation: "",
   });
+  const [loading, setLoading] = useState(false);
 
   const [errors, setErrors] = useState({});
 
@@ -50,6 +51,44 @@ const Form = () => {
     if (validate()) {
       console.log("Form submitted successfully", formData);
     }
+    setLoading(true);
+    const templateParams = {
+      fullName: formData.fullName,
+      email: formData.email,
+      phone: formData.phone,
+      eventDate: formData.eventDate,
+      eventLocation: formData.eventLocation,
+    };
+
+    emailjs
+      .send(
+        "service_iag0eml", // ----> service id
+        "template_snby4za",  // -----> template id
+        templateParams, 
+        "GZniZ-p0MyFYgoTmG"  // ------> public id
+      )
+      .then(
+        () => {
+          //   setIsSubmit(!isSubmit);
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            eventDate: "",
+            eventLocation: "",
+          });
+          setErrors({});
+          alert("Form Submited Successfully");
+          setLoading(false);
+        },
+        (error) => {
+          setLoading(false);
+          // setIsSubmit(!isSubmit);
+          // setEmailError("Email Not Sent. Try Again");
+          console.log("email error", error);
+          alert("Form not Submitted");
+        }
+      );
   };
 
   return (
@@ -108,7 +147,7 @@ const Form = () => {
             error={errors.eventLocation}
           />
           <button type="submit" className="submitbutton">
-            Submit Form
+            {loading ? "Loading..." : "Submit Form"}
             <img src={rightArrow} alt="" />
           </button>
         </form>
