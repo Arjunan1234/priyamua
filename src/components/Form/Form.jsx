@@ -62,10 +62,10 @@ const Form = () => {
 
     emailjs
       .send(
-        "service_iag0eml", // ----> service id
-        "template_snby4za",  // -----> template id
-        templateParams, 
-        "GZniZ-p0MyFYgoTmG"  // ------> public id
+        "service_r4dbkgi", // ----> service id
+        "template_1b9kmo3", // -----> template id
+        templateParams,
+        "3pOtGUrrSvaGGtdyJ" // ------> public id
       )
       .then(
         () => {

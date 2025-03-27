@@ -13,6 +13,7 @@ import backgroundImage3 from "../assets/images/banner/banner3.png";
 import backgroundImageMobile1 from "../assets/images/banner/banner1Mobile.png";
 import backgroundImageMobile2 from "../assets/images/banner/banner2Mobile.png";
 import backgroundImageMobile3 from "../assets/images/banner/banner3Mobile.png";
+import whatsapp from "../assets/images/about/whatsapp.svg";
 
 import "./homePage.scss";
 import "slick-carousel/slick/slick.css";
@@ -63,6 +64,12 @@ const Mobile = [
 const HomePage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const isLargeScreen = useMediaQuery({ maxWidth: 992 });
+
+  const handleScrollToTop = () => {
+    const phoneNumber = "918287623582"; // Replace with actual phone number (with country code)
+    const whatsappURL = `https://wa.me/${phoneNumber}`;
+    window.open(whatsappURL, "_blank", "noopener,noreferrer");
+  };
 
   const settings = {
     dots: true,
@@ -145,6 +152,12 @@ const HomePage = () => {
 
       <Form />
       <Footer />
+      <img
+        className="whatsapp"
+        src={whatsapp}
+        alt=""
+        onClick={handleScrollToTop}
+      />
     </>
   );
 };

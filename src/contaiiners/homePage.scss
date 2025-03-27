@@ -43,6 +43,21 @@
         display: none !important;
     }
 
+
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    // padding: 8px;
+    border-radius: 50%;
+    // background: #D73D84;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 58px;
+    height: 58px;
 }
 
 
@@ -154,4 +169,7 @@
             position: static;
         }
     }
+
+
+
 }
