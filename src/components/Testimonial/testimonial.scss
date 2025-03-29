@@ -38,9 +38,10 @@
     .card {
         max-width: 600px;
         display: flex !important;
-        @include variables.d-flex($al: center, $jc: center, $gap: 20px);
+        @include variables.d-flex($al: center, $jc: flex-start, $gap: 20px);
         flex-direction: column;
         padding: 40px;
+        height: 531px;
         background: rgba(255, 255, 255, 0.11);
         backdrop-filter: blur(12.5px);
 
@@ -189,7 +190,7 @@
         .card {
             max-width: 600px;
             display: flex !important;
-            @include variables.d-flex($al: center, $jc: center, $gap: 20px);
+            @include variables.d-flex($al: center, $jc: flex-start, $gap: 20px);
             flex-direction: column;
             padding: 20px 16px;
             background: rgba(255, 255, 255, 0.11);

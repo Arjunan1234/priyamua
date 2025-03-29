@@ -6,12 +6,10 @@ const Portfolio = () => {
   return (
     <section className="container portfolioContainer" id="portfolio">
       <div className="portfolioHeading">
-        <FadeUp>
-          <p>PORTFOLIO</p>
-        </FadeUp>
-        <FadeUp>
-          <h5>Discover the Art of Transformation</h5>
-        </FadeUp>
+        <p>PORTFOLIO</p>
+
+        <h5>Discover the Art of Transformation</h5>
+
         <FadeUp>
           <span>
             Browse through a curated gallery of my favorite creations,

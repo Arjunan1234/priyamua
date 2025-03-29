@@ -2,11 +2,11 @@
 
 
 .formContainer {
-    @include variables.d-flex($al: flex-start, $gap: 10px);
+    @include variables.d-flex($al: flex-start, );
 
     img {
         max-width: 725px;
-        max-height: 874.5px;
+        max-height: 848.5px;
     }
 
 
@@ -59,11 +59,11 @@
 
 @media screen and (max-width : 992px) {
     .formContainer {
-        @include variables.d-flex($al: center, $gap: 10px);
+        @include variables.d-flex($al: center, );
         flex-direction: column;
 
         img {
-            max-width: 375px;
+            max-width: 100%;
             max-height: 874.5px;
         }
 

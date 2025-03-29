@@ -12,21 +12,22 @@ const BridalCard = [
     image: image1,
     heading: "Bridal Makeup, packages starting from INR 15,000/-",
     description:
-      "Your big day deserves perfection. I create timeless, picture-perfect bridal looks that radiate elegance and confidence.",
+      "Your big day deserves perfection. I create timeless, picture-perfect bridal looks that radiate elegance and confidence",
   },
   {
     id: 2,
     image: image2,
-    heading: "Bridal Makeup, packages starting from INR 15,000/-",
+    heading:
+      "Engagement, Cocktail and Reception, packages starting from INR 10,000/-",
     description:
-      "Your big day deserves perfection. I create timeless, picture-perfect bridal looks that radiate elegance and confidence.",
+      "Unleash the power of imagination with avant-garde, trendsetting looks for photoshoots and creative projects.",
   },
   {
     id: 3,
     image: image3,
-    heading: "Bridal Makeup, packages starting from INR 15,000/-",
+    heading: "Party Makeup, packages starting from INR 4,000/-",
     description:
-      "Your big day deserves perfection. I create timeless, picture-perfect bridal looks that radiate elegance and confidence.",
+      " Be the showstopper at any event with glam that turns heads and steals the spotlight.",
   },
 ];
 

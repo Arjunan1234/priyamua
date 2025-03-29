@@ -30,16 +30,16 @@
         }
 
         .serviceCardContainer {
-            @include variables.d-flex($al: center, $jc: space-between);
+            @include variables.d-flex($al: center, $jc: flex-start);
             gap: 20px;
             flex-wrap: wrap;
 
 
             .card {
+                width: 49%;
                 padding: 24px;
-                min-height: 182px;
+                min-height: 157px;
                 border-radius: 16px;
-                max-width: 392px;
                 border: 1px solid #3B3B3B;
                 background: rgba(255, 255, 255, 0.10);
                 backdrop-filter: blur(220px);
@@ -106,7 +106,7 @@
                     padding: 24px;
                     min-height: 182px;
                     border-radius: 16px;
-                    max-width: 392px;
+                    width: 100%;
                     border: 1px solid #3B3B3B;
                     background: rgba(255, 255, 255, 0.10);
                     backdrop-filter: blur(220px);
