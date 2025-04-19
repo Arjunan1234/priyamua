@@ -4,6 +4,12 @@ import rightArrow from "../../assets/images/form/rightArrow.svg";
 import "./banner.scss";
 import FadeUp from "../../utils/FadeUp";
 const Banner = ({ image, heading, content }) => {
+  const scrollToForm = () => {
+    const formSection = document.getElementById("contact-form");
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section
       className="container bannerContainer"
@@ -19,7 +25,7 @@ const Banner = ({ image, heading, content }) => {
           <p>{content}</p>
         </FadeUp>
       </div>
-      <button type="submit" className="submitbutton">
+      <button type="submit" className="submitbutton" onClick={scrollToForm}>
         <FadeUp>Book Your Dream Look Today!</FadeUp>
         <img src={rightArrow} alt="" />
       </button>

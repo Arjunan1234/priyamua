@@ -4,6 +4,12 @@ import Button from "../Button/Button";
 import FadeUp from "../../utils/FadeUp";
 
 const Connect = () => {
+  const scrollToForm = () => {
+    const formSection = document.getElementById("contact-form");
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section className="container connectContainer ">
       <div className="connectContent">
@@ -26,7 +32,9 @@ const Connect = () => {
         <div className="buttonContainer2">
           <Button title="Book Your Appointment" />
 
-          <button className="consulation">Get a Free Consultation</button>
+          <button className="consulation" onClick={scrollToForm}>
+            Get a Free Consultation
+          </button>
         </div>
       </div>
     </section>

@@ -2,6 +2,7 @@ import React from "react";
 
 import choose from "../../assets/images/choose/choose.png";
 import chooseMobile from "../../assets/images/choose/chooseMobile.png";
+import video from "../../assets/videos/qualities.mp4";
 
 import top from "../../assets/images/choose/top.svg";
 import available from "../../assets/images/choose/available.svg";
@@ -54,10 +55,11 @@ const ChooseMe = () => {
       </div>
       <div
         className="backgroundContainer"
-        style={{
-          backgroundImage: `url(${isLargeScreen ? chooseMobile : choose} )`,
-        }}
+        // style={{
+        //   backgroundImage: `url(${isLargeScreen ? chooseMobile : choose} )`,
+        // }}
       >
+        <video src={video} autoPlay muted playsInline loop />
         <div className="chooseContent">
           {chooseItems.map((item) => (
             <div className="chooseSpecific" key={item.id}>

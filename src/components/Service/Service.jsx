@@ -15,30 +15,10 @@ const serviceData = [
     heading: "Celebrity & Red Carpet Makeup",
     description: "Luxe makeup for high-profile events.",
   },
-  {
-    heading: "Eye Makeup Only (Smokey, Glitter, Cut Crease, etc.)",
-    description: "Perfect for when you want the focus on your eyes.",
-  },
+
   {
     heading: "Bridal Party Makeup (For Bridesmaids & Family) ",
     description: "Ensure your entire bridal squad looks stunning.",
-  },
-  {
-    heading: "Tattoo Coverage & Skin Camouflag",
-    description:
-      "Expert techniques to conceal tattoos, scars, or pigmentation.",
-  },
-  {
-    heading: "Theatrical & Costume Makeup",
-    description: "Get a flawless look for your special photos.",
-  },
-  {
-    heading: "Drag & Transformational Makeup",
-    description: "Bold and creative looks for artistic transformations.",
-  },
-  {
-    heading: "Face painting and face glitter / body glitter.",
-    description: "Get a flawless look for your special photos.",
   },
 ];
 

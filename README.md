@@ -1,33 +1,14 @@
-# Project Setup
+# React + Vite
 
-## Prerequisites
-Make sure you have **Node.js** installed on your system before proceeding.
-install Node Js : https://nodejs.org/en/download (for Windows)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Installation Steps
+Currently, two official plugins are available:
 
-1. **Clone the Project**
-   ```sh
-   git clone https://github.com/Arjunan1234/priyamua.git
-   ```
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-2. **Navigate to the Project Folder**
-   ```sh
-   cd priyamua
-   ```
+## Expanding the ESLint configuration
 
-3. **Install Dependencies**
-   ```sh
-   npm i
-   ```
-
-4. **Start the Server**
-   ```sh
-   npm run dev
-   ```
-
-## Open In Broswer
-- http://localhost:5173
-
-
-
+If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# priyamua
+# priyamua

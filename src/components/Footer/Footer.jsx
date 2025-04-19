@@ -6,6 +6,10 @@ import "./footer.scss";
 import FadeUp from "../../utils/FadeUp";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <footer className="container footerContainer">
       <div className="footerDetails">
@@ -16,7 +20,9 @@ const Footer = () => {
                 <p className="footerSubTitle">Phone</p>
               </FadeUp>
               <FadeUp>
-                <p className="footerSubTitle">+91 8287623582</p>
+                <a className="footerSubTitle" href="tel:+918287623582">
+                  +91 8287623582
+                </a>
               </FadeUp>
             </div>
             <div className="footerData">
@@ -24,11 +30,18 @@ const Footer = () => {
                 <p className="footerSubTitle">Instragram</p>
               </FadeUp>
               <FadeUp>
-                <p className="footerSubTitle">@priyachandra_mua</p>
+                <a
+                  className="footerSubTitle"
+                  href="https://www.instagram.com/priyachandra_mua"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @priyachandra_mua
+                </a>
               </FadeUp>
             </div>
           </div>
-          <div className="backtotop">
+          <div className="backtotop" onClick={scrollToTop}>
             <img src={upArrow} alt="upArrow" />
             Back to Top
           </div>
